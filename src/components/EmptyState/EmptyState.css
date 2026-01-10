@@ -1,0 +1,9 @@
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.empty-state p:first-child {
+  font-weight: bold;
+}
