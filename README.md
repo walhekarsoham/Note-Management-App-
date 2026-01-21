@@ -6,7 +6,7 @@ Notes Manager is a simple and focused React application that allows users to cre
 ---
 
 ## **How to Run the Project**
-
+<code>
 ### **Prerequisites**
 - Node.js (version 16 or higher recommended)
 - npm package manager
@@ -18,34 +18,42 @@ npm install
 
 # Start development server
 npm run dev
-
+</code>
 The application will be available at:
 http://localhost:5173
 
-![Disabled button](Screenshot 2026-01-11 210829.png)
-![Insertion](Screenshot 2026-01-11 211159.png)
-![Delition](Screenshot 2026-01-11 211230.png)
+## Screenshots
 
-Component Breakdown
-App
+### Disabled Button State
+![Disabled Button](./disabled-button.png)
+
+### Note Insertion
+![Note Insertion](./note-insert.png)
+
+### Note Deletion
+![Note Deletion](./note-delete.png)
+
+
+##Component Breakdown
+###App
 
 Root component of the application
 
 Acts as the single source of truth
 
-Manages global state:
+###Manages global state:
 
 notes
 
 loading
 
-Handles core business logic:
+###Handles core business logic:
 
 Adding notes
 
 Deleting notes
 
-Controls conditional rendering for:
+###Controls conditional rendering for:
 
 Loading state
 
@@ -61,11 +69,11 @@ Handles creation of new notes
 
 Manages local form state (title and description)
 
-Performs inline validation:
+###Performs inline validation:
 
 Ensures the title field is not empty
 
-On successful submission:
+###On successful submission:
 
 Sends note data to App using a callback
 
@@ -111,13 +119,13 @@ Provides a clear and user-friendly message
 
 Prevents an empty or confusing UI when the notes list is empty
 
-State Management Explanation
+#State Management Explanation
 
 All application state is managed centrally within App.jsx using React’s useState hook. State is lifted to the lowest common ancestor to avoid duplication and ensure consistency across components.
 
 Data flows downward from the parent component to child components through props, while user interactions such as adding or deleting notes propagate upward through callback functions. This unidirectional data flow ensures predictable state updates and simplifies debugging.
 
-Data Flow Examples
+#Data Flow Examples
 
 Add Note: NoteForm → App → NoteList
 
@@ -131,7 +139,7 @@ No duplicated or conflicting state
 
 Clear separation of concerns
 
-UI States Handled
+#UI States Handled
 
 The application explicitly accounts for common UI scenarios to improve usability and robustness:
 
@@ -151,7 +159,7 @@ Authentication and authorization are not included
 
 Styling is intentionally minimal to prioritize clarity, logic, and maintainability
 
-Technology Stack
+#Technology Stack
 
 React JS
 
